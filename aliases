@@ -2,14 +2,7 @@ alias g='grep -i'  #case insensitive grep
 alias f='find . -iname'
 alias top='top -o cpu'
 alias ls='ls -al'
-#alias serve="ruby -rwebrick -e\"s = WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
-alias serve="php -S lvh.me:8888 -t public"
+alias serve="ruby -rwebrick -e\"s = WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 alias cls='clear'
-alias rsd='rake staging vlad:deploy'
 alias gti='git'
-alias phinx='php vendor/bin/phinx'
-alias hcphinx='php ../packages/vendor/bin/phinx'
-alias vkphinx='php ../packages/vendor/bin/phinx'
-alias phake='./phake/bin/phake'
-alias phps='php -S localhost:3000 -t public'

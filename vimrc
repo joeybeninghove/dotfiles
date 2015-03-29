@@ -148,22 +148,3 @@ map <leader>n :call RenameFile()<cr>
 
 set t_Co=256
 colorscheme vividchalk
-
-
-" set color scheme
-" if has("gui_running")
-"     set guifont=Monaco:h16
-"     set antialias
-" 
-"     colorscheme vividchalk
-" 
-"     if !exists("g:vimrcloaded")
-"         winpos 0 0
-"         if ! &diff
-"             winsize 130 90
-"         else
-"             winsize 227 90
-"         endif
-"         let g:vimrcloaded = 1
-"     endif
-" endif
