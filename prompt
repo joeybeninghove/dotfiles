@@ -27,4 +27,3 @@ source ~/.git-prompt
 
 # configure terminal prompt
 export PS1="\[${COLOR_GREEN}\]\$(~/.rvm/bin/rvm-prompt)\[${COLOR_BLUE}\]\$(__git_ps1) \n\[${COLOR_RED}\]\w\n\$(get_cross) \[${COLOR_NC}\]"
-#export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
