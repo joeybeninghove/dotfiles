@@ -6,3 +6,6 @@ alias serve="ruby -rwebrick -e\"s = WEBrick::HTTPServer.new(:Port => 3000, :Docu
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 alias cls='clear'
 alias gti='git'
+
+function glist { echo `gem list -r $1 | grep "^$1 "`; }
+alias gl='glist'
