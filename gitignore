@@ -3,3 +3,4 @@
 .netrwhist
 log/*.log
 tmp/**/*
+.sass-cache
