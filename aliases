@@ -9,3 +9,5 @@ alias gti='git'
 
 function glist { echo `gem list -r ^$1$`; }
 alias gl='glist'
+
+source ~/.aliases.local

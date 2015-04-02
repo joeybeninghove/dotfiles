@@ -26,6 +26,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-eunuch'
 Plugin 'groenewege/vim-less'
+Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 

@@ -1,0 +1,37 @@
+snippet lti
+<%= link_to t("${1:key}"), "${2:url}" %>
+endsnippet
+
+snippet ltt
+<%= link_to "${1:text}", "${2:url}" %>
+endsnippet
+
+snippet lttp
+<%= link_to "${1:text}", ${2:route}_path${0} %>
+endsnippet
+
+snippet ltip
+<%= link_to t("${1:key}"), ${2:route}_path${0} %>
+endsnippet
+
+snippet lttd
+<%= link_to "${2:url}"${0} do %>
+	${1:text}
+<% end %>
+endsnippet
+
+snippet ltid
+<%= link_to "${2:url}"${0} do %>
+	<%= t("${1:key}") %>
+<% end %>
+endsnippet
+
+snippet ltipd
+<%= link_to ${2:route}_path${0} do %>
+	<%= t("${1:key}") %>
+<% end %>
+endsnippet
+
+snippet t
+<%= t("${1:key}") %>
+endsnippet

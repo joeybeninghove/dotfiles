@@ -36,3 +36,5 @@ source ~/.git-completion
 
 # load prompt
 source ~/.prompt
+
+eval "$(direnv hook bash)"
