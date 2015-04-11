@@ -1,9 +1,9 @@
 snippet lti
-<%= link_to t("${1:key}"), "${2:url}" %>
+<%= link_to t("${1:key}"), "${2:javascript:void(0)}" %>
 endsnippet
 
 snippet ltt
-<%= link_to "${1:text}", "${2:url}" %>
+<%= link_to "${1:text}", "${2:javascript:void(0)}" %>
 endsnippet
 
 snippet lttp
@@ -15,13 +15,13 @@ snippet ltip
 endsnippet
 
 snippet lttd
-<%= link_to "${2:url}"${0} do %>
+<%= link_to "${2:javascript:void(0)}"${0} do %>
 	${1:text}
 <% end %>
 endsnippet
 
 snippet ltid
-<%= link_to "${2:url}"${0} do %>
+<%= link_to "${2:javascript:void(0)}"${0} do %>
 	<%= t("${1:key}") %>
 <% end %>
 endsnippet
@@ -32,6 +32,36 @@ snippet ltipd
 <% end %>
 endsnippet
 
-snippet t
+snippet t "translate" i
 <%= t("${1:key}") %>
+endsnippet
+
+snippet i
+<i class="fa fa-${1:icon}"></i> ${0}
+endsnippet
+
+snippet jv "void" i
+javascript:void(0)
+endsnippet
+
+snippet sf "simple form"
+<%= simple_form_for ${1:resource} do |f| %>
+	${0}
+<% end %>
+endsnippet
+
+snippet sfi "simple form input"
+<%= f.input :${1:field} %>
+endsnippet
+
+snippet end
+<% end %>
+endsnippet
+
+snippet = "equals" i
+<%= ${0} %>
+endsnippet
+
+snippet jsi
+<%= javascript_include_tag "${0:path}" %>
 endsnippet

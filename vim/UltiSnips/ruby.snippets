@@ -1,0 +1,35 @@
+snippet it
+it "${1:does something}" do
+  ${0}
+end
+endsnippet
+
+snippet sc
+scenario "${1:something happens}" do
+  ${0}
+end
+endsnippet
+
+snippet con
+class ${1:Resource}Controller < ${2:ApplicationController}
+	${0}
+end
+endsnippet
+
+snippet def
+def ${1:method}
+  ${0}
+end
+endsnippet
+
+snippet desc
+describe ${1:sut} do
+  ${0}
+end
+endsnippet
+
+snippet context
+context "${1:context}" do
+  ${0}
+end
+endsnippet
