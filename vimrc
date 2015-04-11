@@ -14,7 +14,7 @@ set hlsearch            " highlight search
 set laststatus=2        " always display the status line
 set autowrite           " automatically :write before running commands
 set relativenumber      " relative line numbers by default
-set clipboard=unnamed    " yank to system clipboard
+set clipboard=unnamed   " yank to system clipboard
 set backupdir=/tmp      " don't clutter up current dir with tmp files
 set directory=/tmp      " don't clutter up current dir with swap files
 
@@ -125,6 +125,18 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" emmet
+let g:user_emmet_leader_key='<C-y>'
+
 " toggle nerdtree
 map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
@@ -149,6 +161,8 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+runtime macros/matchit.vim
 
 " ---------- COLORS ------------
 

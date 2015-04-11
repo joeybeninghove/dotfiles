@@ -27,6 +27,8 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-eunuch'
 Plugin 'groenewege/vim-less'
 Plugin 'SirVer/ultisnips'
+Plugin 'scrooloose/syntastic'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 
