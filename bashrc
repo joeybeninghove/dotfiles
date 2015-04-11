@@ -1,5 +1,5 @@
 # pretty colors in vim
-export TERM=xterm-color
+export TERM=xterm-256color
 
 # enable coloring in terminal
 export CLICOLOR=1
