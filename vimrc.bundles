@@ -29,6 +29,9 @@ Plugin 'groenewege/vim-less'
 Plugin 'SirVer/ultisnips'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
+Plugin 'xsbeats/vim-blade'
+Plugin 'joeybeninghove/vim-phpunit'
+Plugin 'tyru/current-func-info.vim'
 
 call vundle#end()
 

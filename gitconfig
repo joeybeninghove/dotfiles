@@ -19,4 +19,4 @@
 [github]
 	user = joeybeninghove
 [merge]
-  ff = only
+  #ff = only

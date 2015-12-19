@@ -120,6 +120,10 @@ map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 map <leader>a :call RunAllSpecs()<cr>
 
+map <Leader>u :call RunCurrentTest()<CR>
+map <Leader>uf :call RunCurrentTestFile()<CR>
+map <Leader>ua :call RunAllTests()<CR>
+
 " ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"

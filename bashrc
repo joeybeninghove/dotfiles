@@ -37,4 +37,7 @@ source ~/.git-completion
 # load prompt
 source ~/.prompt
 
+ulimit -n 65536
+ulimit -u 2048
+
 eval "$(direnv hook bash)"
