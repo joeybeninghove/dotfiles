@@ -17,6 +17,7 @@ set relativenumber      " relative line numbers by default
 set clipboard=unnamed   " yank to system clipboard
 set backupdir=/tmp      " don't clutter up current dir with tmp files
 set directory=/tmp      " don't clutter up current dir with swap files
+set wildignore+=*/.git/*,*/.DS_Store,*/node_modules
 
 " load vim bundles using vundle
 source ~/.vimrc.bundles
@@ -89,6 +90,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 " ruby syntax highlighting for watchr scripts
 autocmd BufRead,BufNewFile *.watchr set filetype=ruby
 autocmd BufRead,BufNewFile *.god set filetype=ruby
+autocmd BufRead,BufNewFile Phakefile set filetype=php
 
 autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
@@ -96,6 +98,14 @@ autocmd FileType php setlocal shiftwidth=4 tabstop=4
 " ---------- MAPPINGS ----------
 
 nmap <leader>t :CtrlP<cr>
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|public$|log\|tmp|vendor|node_modules$',
+  \ 'file': '\.dat$|\.DS_Store$'
+  \ }
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " turn off that stupid highlight search
 nmap <silent> <leader>h :nohlsearch<cr>
@@ -115,11 +125,17 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " rpsec shortcuts
-map <leader>f :call RunCurrentSpecFile()<cr>
-map <leader>s :call RunNearestSpec()<cr>
-map <leader>l :call RunLastSpec()<cr>
-map <leader>a :call RunAllSpecs()<cr>
+"map <leader>f :call RunCurrentSpecFile()<cr>
+"map <leader>s :call RunNearestSpec()<cr>
+"map <leader>l :call RunLastSpec()<cr>
+"map <leader>a :call RunAllSpecs()<cr>
 
+" phpspec shortcuts
+map <Leader>s :call RunCurrentSpecFile()<CR>
+map <Leader>f :call RunCurrentSpecFile()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" phpunit shortcuts
 map <Leader>u :call RunCurrentTest()<CR>
 map <Leader>uf :call RunCurrentTestFile()<CR>
 map <Leader>ua :call RunAllTests()<CR>
@@ -143,6 +159,7 @@ let g:user_emmet_leader_key='<C-y>'
 
 " toggle nerdtree
 map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+let NERDTreeIgnore=['\node_modules$']
 
 " suspend
 map <silent> <leader>z :suspend<cr>
