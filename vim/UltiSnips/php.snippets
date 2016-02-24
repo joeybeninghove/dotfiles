@@ -5,3 +5,81 @@ public function ${1:test name}()
     ${0:$this->markTestIncomplete();}
 }
 endsnippet
+
+snippet it
+/** @test */
+public function it_${1}()
+{
+    ${0:$this->markTestIncomplete();}
+}
+endsnippet
+
+snippet pro
+$this->prophet = new Prophet();
+endsnippet
+
+snippet double
+$this->prophet->prophesize(${1});
+endsnippet
+
+snippet sut
+$sut = $this->createSUT();
+endsnippet
+
+snippet csut
+public function createSUT()
+{
+	${1}
+}
+endsnippet
+
+snippet this
+$this->
+endsnippet
+
+snippet prf
+private function ${0}()
+{
+}
+endsnippet
+
+snippet ae
+$this->assertEquals(${0});
+endsnippet
+
+snippet ac
+$this->assertCount(${0});
+endsnippet
+
+snippet php
+<?php
+endsnippet
+
+snippet ns
+namespace ${0};
+endsnippet
+
+snippet class
+class ${1}
+{
+	${0}
+}
+endsnippet
+
+snippet use
+use ${0};
+endsnippet
+
+snippet ctor
+public function __construct()
+{
+}
+endsnippet
+
+snippet upro
+use Prophecy\Prophet;
+endsnippet
+
+snippet uproarg
+use Prophecy\Argument;
+endsnippet
