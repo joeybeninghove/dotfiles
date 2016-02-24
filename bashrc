@@ -28,6 +28,8 @@ bind "set show-all-if-ambiguous On"
 # load rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+. `brew --prefix`/etc/profile.d/z.sh
+
 # load aliases
 source ~/.aliases
 
