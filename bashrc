@@ -5,7 +5,7 @@ export TERM=xterm-256color
 export CLICOLOR=1
 
 # paths
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.composer/vendor/bin:vendor/bin:$HOME/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.composer/vendor/bin:bin:vendor/bin:$HOME/bin:$PATH
 
 # vim for life
 export EDITOR='vim'
