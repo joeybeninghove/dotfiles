@@ -10,6 +10,7 @@ alias rr='rake routes'
 alias s='rails s'
 alias v='vim'
 alias b='bundle install'
+alias bu='bundle update'
 alias cob='git checkout -b'
 alias bd='git branch -d'
 alias pu='vendor/bin/phpunit'
@@ -37,6 +38,8 @@ alias php-fpm.logs='tail -250f /usr/local/var/log/php-fpm.log'
 alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias mysql.restart='mysql.stop && mysql.start'
+
+alias mongo.start="/usr/local/bin/mongod -vv --config /usr/local/etc/mongod.conf --setParameter failIndexKeyTooLong=false"
 
 function glist { echo `gem list -r ^$1$`; }
 alias gl='glist'
