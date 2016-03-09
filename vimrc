@@ -125,20 +125,28 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " rpsec shortcuts
-"map <leader>f :call RunCurrentSpecFile()<cr>
-"map <leader>s :call RunNearestSpec()<cr>
-"map <leader>l :call RunLastSpec()<cr>
-"map <leader>a :call RunAllSpecs()<cr>
+map <leader>f :call RunCurrentSpecFile()<cr>
+map <leader>s :call RunNearestSpec()<cr>
+map <leader>l :call RunLastSpec()<cr>
+map <leader>a :call RunAllSpecs()<cr>
 
 " phpspec shortcuts
-map <Leader>s :call RunCurrentSpecFile()<CR>
-map <Leader>f :call RunCurrentSpecFile()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+"map <Leader>s :call RunCurrentSpecFile()<CR>
+"map <Leader>f :call RunCurrentSpecFile()<CR>
+"map <Leader>a :call RunAllSpecs()<CR>
 
 " phpunit shortcuts
 map <Leader>u :call RunCurrentTest()<CR>
 map <Leader>uf :call RunCurrentTestFile()<CR>
 map <Leader>ua :call RunAllTests()<CR>
+
+" tmux navigator
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
 " ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -188,4 +196,5 @@ runtime macros/matchit.vim
 " ---------- COLORS ------------
 
 set t_Co=256
-colorscheme vividchalk
+set background=dark
+colorscheme hybrid

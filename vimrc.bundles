@@ -32,6 +32,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'xsbeats/vim-blade'
 Plugin 'joeybeninghove/vim-phpunit'
 Plugin 'tyru/current-func-info.vim'
+Plugin 'scwood/vim-hybrid'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
