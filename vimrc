@@ -95,7 +95,14 @@ autocmd BufRead,BufNewFile Phakefile set filetype=php
 autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
 " ---------- MAPPINGS ----------
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
 
 nmap <leader>t :CtrlP<cr>
 let g:ctrlp_custom_ignore = {
