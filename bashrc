@@ -28,6 +28,9 @@ bind "set show-all-if-ambiguous On"
 # load rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# load phpbrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
 . `brew --prefix`/etc/profile.d/z.sh
 
 # load aliases

@@ -1,47 +1,40 @@
-alias g='grep -i'  #case insensitive grep
-alias f='find . -iname'
-alias top='top -o cpu'
-alias ls='ls -al'
-alias serve="ruby -rwebrick -e\"s = WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start\""
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
-alias cls='clear'
-alias gti='git'
-alias rr='rake routes'
-alias s='rails s'
-alias v='vim'
-alias b='bundle install'
-alias bu='bundle update'
-alias cob='git checkout -b'
-alias bd='git branch -d'
-alias pu='vendor/bin/phpunit'
-alias phpunit='vendor/bin/phpunit'
-alias m='php artisan migrate'
-alias pa='php artisan'
-alias ti='php artisan tinker'
-alias l='tail -f storage/logs/laravel.log'
+alias g="grep -i"  #case insensitive grep
+alias f="find . -iname"
+alias top="top -o cpu"
+alias ls="ls -al"
+alias cls="clear"
+alias gti="git"
+alias rr="rake routes"
+alias s="rails s"
+alias v="vim"
+alias b="bundle install"
+alias bu="bundle update"
+alias cob="git checkout -b"
+alias bd="git branch -d"
+alias pu="vendor/bin/phpunit"
+alias phpunit="vendor/bin/phpunit"
+alias m="php artisan migrate"
+alias pa="php artisan"
+alias ti="php artisan tinker"
+alias l="tail -f storage/logs/laravel.log"
 
-alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
-alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
-alias nginx.restart='nginx.stop && nginx.start'
-alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
-alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
-alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
-alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
-alias nginx.logs.phpmyadmin.error='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.error.log'
-alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.access.log'
+alias nginx.start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx-full.plist"
+alias nginx.stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.nginx-full.plist"
+alias nginx.restart="nginx.stop && nginx.start"
+alias nginx.reload="nginx -s reload"
+alias nginx.logs.error="tail -250f /usr/local/var/log/nginx/error.log"
+alias nginx.logs.access="tail -250f /usr/local/var/log/nginx/access.log"
 
-alias php-fpm.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
-alias php-fpm.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist"
-alias php-fpm.restart='php-fpm.stop && php-fpm.start'
-alias php-fpm.logs='tail -250f /usr/local/var/log/php-fpm.log'
+alias fpm.start="phpbrew fpm start"
+alias fpm.stop="phpbrew fpm stop"
+alias fpm.restart="fpm.stop && fpm.start"
 
 alias mysql.start="launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
 alias mysql.stop="launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist"
-alias mysql.restart='mysql.stop && mysql.start'
+alias mysql.restart="mysql.stop && mysql.start"
 
-alias mongo.start="/usr/local/bin/mongod -vv --config /usr/local/etc/mongod.conf --setParameter failIndexKeyTooLong=false"
-
-function glist { echo `gem list -r ^$1$`; }
-alias gl='glist'
+alias mongo.start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb24.plist"
+alias mongo.stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.mongodb24.plist"
+alias mongo.restart="mongo.stop && mongo.start"
 
 source ~/.aliases.local
