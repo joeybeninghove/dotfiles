@@ -1,12 +1,12 @@
 require "rubygems"
 
 # awesome print
-begin
-  require "awesome_print"
-  AwesomePrint.irb!
-rescue LoadError => e
-  warn "Couldn't load awesome_print: #{e}"
-end
+#begin
+#  require "awesome_print"
+#  AwesomePrint.irb!
+#rescue LoadError => e
+#  warn "Couldn't load awesome_print: #{e}"
+#end
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
