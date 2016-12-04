@@ -25,5 +25,12 @@ function get_cross {
 # load git prompt
 source ~/.git-prompt
 
+# capture rbenv version
+__rbenv_ps1 ()
+{
+  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
+  printf $rbenv_ruby_version
+}
+
 # configure terminal prompt
-export PS1="\[${COLOR_GREEN}\]\$(~/.rvm/bin/rvm-prompt)\[${COLOR_BLUE}\]\$(__git_ps1) \n\[${COLOR_RED}\]\w\n\$(get_cross) \[${COLOR_NC}\]"
+export PS1="\[${COLOR_GREEN}\]ruby=\$(__rbenv_ps1)\[${COLOR_BLUE}\]\$(__git_ps1) \n\[${COLOR_RED}\]\w\n$(get_cross) \[${COLOR_NC}\]"
