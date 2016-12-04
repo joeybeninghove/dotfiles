@@ -54,7 +54,22 @@ snippet sfi "simple form input"
 <%= f.input :${1:field} %>
 endsnippet
 
+snippet else
+<% else %>
+endsnippet
+
 snippet end
+<% end %>
+endsnippet
+
+snippet if
+<% if ${0} %>
+<% end %>
+endsnippet
+
+snippet ifelse
+<% if ${0} %>
+<% else %>
 <% end %>
 endsnippet
 
