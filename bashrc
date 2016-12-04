@@ -1,14 +1,11 @@
-# pretty colors in vim
-export TERM=xterm-256color
-
 # enable coloring in terminal
 export CLICOLOR=1
 
 # paths
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$HOME/.composer/vendor/bin:bin:vendor/bin:$HOME/bin:$PATH
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:vendor/bin:$HOME/bin:./bin
 
 # vim for life
-export EDITOR='vim'
+export EDITOR="vim"
 
 # ignores dupes in the history
 export HISTCONTROL=ignoredups 
@@ -25,14 +22,6 @@ bind "set bell-style none"
 # show completion without double tab-ing
 bind "set show-all-if-ambiguous On"
 
-# load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# load phpbrew
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
-
-. `brew --prefix`/etc/profile.d/z.sh
-
 # load aliases
 source ~/.aliases
 
@@ -42,7 +31,8 @@ source ~/.git-completion
 # load prompt
 source ~/.prompt
 
-ulimit -n 65536
-ulimit -u 2048
+# added by travis gem
+[ -f /Users/joey/.travis/travis.sh ] && source /Users/joey/.travis/travis.sh
 
-eval "$(direnv hook bash)"
+# init rbenv
+eval "$(rbenv init -)"
