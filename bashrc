@@ -2,7 +2,7 @@
 export CLICOLOR=1
 
 # paths
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:vendor/bin:$HOME/bin:./bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:vendor/bin:$HOME/bin
 
 # vim for life
 export EDITOR="vim"
@@ -36,3 +36,6 @@ source ~/.prompt
 
 # init rbenv
 eval "$(rbenv init -)"
+
+# add local bin dir to path
+export PATH=./bin:$PATH
