@@ -1,8 +1,5 @@
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+  ui = auto
 [user]
 	name = Joey Beninghove
 	email = me@joey.io
@@ -19,4 +16,6 @@
 [github]
 	user = joeybeninghove
 [merge]
-  #ff = only
+  ff = only
+[rebase]
+  autosquash = true
