@@ -142,10 +142,12 @@ map <leader>a :call RunAllSpecs()<cr>
 "map <Leader>f :call RunCurrentSpecFile()<CR>
 "map <Leader>a :call RunAllSpecs()<CR>
 
-" phpunit shortcuts
-map <Leader>u :call RunCurrentTest()<CR>
-map <Leader>uf :call RunCurrentTestFile()<CR>
-map <Leader>ua :call RunAllTests()<CR>
+" vim-test mappings
+nnoremap <silent> <Leader>f :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <leader>gt :TestVisit<CR>
 
 " tmux navigator
 let g:tmux_navigator_no_mappings = 1
