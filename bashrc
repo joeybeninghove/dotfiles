@@ -10,9 +10,6 @@ export EDITOR="vim"
 # ignores dupes in the history
 export HISTCONTROL=ignoredups 
 
-# Homebrew GitHub token
-export HOMEBREW_GITHUB_API_TOKEN=17af0db63dbc3018f58f1defdc33cf17f387f186
-
 # after each command, checks the windows size and changes lines and columns
 shopt -s checkwinsize 
 
