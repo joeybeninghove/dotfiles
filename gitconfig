@@ -16,6 +16,6 @@
 [github]
 	user = joeybeninghove
 [merge]
-  ff = only
+  #ff = only
 [rebase]
   autosquash = true
