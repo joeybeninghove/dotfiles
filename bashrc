@@ -31,11 +31,11 @@ source ~/.git-completion
 # load prompt
 source ~/.prompt
 
-# added by travis gem
-[ -f /Users/joey/.travis/travis.sh ] && source /Users/joey/.travis/travis.sh
-
 # init rbenv
 eval "$(rbenv init -)"
 
 # add local bin dir to path
 export PATH=./bin:$PATH
+
+# source phpbrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
