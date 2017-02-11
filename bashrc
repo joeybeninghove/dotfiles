@@ -2,7 +2,7 @@
 export CLICOLOR=1
 
 # paths
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:vendor/bin:$HOME/bin
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:vendor/bin
 
 # vim for life
 export EDITOR="vim"
@@ -34,8 +34,14 @@ source ~/.prompt
 # init rbenv
 eval "$(rbenv init -)"
 
-# add local bin dir to path
-export PATH=./bin:$PATH
+# add bin dirs to path
+export PATH=$HOME/-/bin:./bin:$PATH
 
 # source phpbrew
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+# load z
+source /usr/local/etc/profile.d/z.sh
+
+# begin in my special dir
+cd ~/-
