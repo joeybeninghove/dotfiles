@@ -42,6 +42,3 @@ export PATH=$HOME/-/bin:./bin:$PATH
 
 # load z
 source /usr/local/etc/profile.d/z.sh
-
-# begin in my special dir
-cd ~/-
