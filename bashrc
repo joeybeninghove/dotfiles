@@ -37,8 +37,5 @@ eval "$(rbenv init -)"
 # add bin dirs to path
 export PATH=$HOME/-/bin:./bin:$PATH
 
-# source phpbrew
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
-
 # load z
 source /usr/local/etc/profile.d/z.sh
