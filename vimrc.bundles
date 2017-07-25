@@ -28,6 +28,8 @@ Plugin 'joeybeninghove/vim-hybrid'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-endwise'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 
