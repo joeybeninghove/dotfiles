@@ -100,6 +100,9 @@ autocmd VimResized * :wincmd =
 
 " ---------- MAPPINGS ----------
 
+" save current buffer by hitting esc twice
+"map <Enter> :w<CR>
+
 " zoom a vim pane, <C-w>= to re-balance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
@@ -182,11 +185,15 @@ let NERDTreeIgnore=['\node_modules$']
 map <silent> <leader>z :suspend<cr>
 
 " open in marked
-nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+nnoremap <leader>m :silent !open -a Markoff.app '%:p'<cr>
 
-" preview in markdown
-map <silent> <leader>p :MDP<cr>
-let g:MarkdownPreviewAlwaysOpen = 1
+let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
 
 " thanks to Gary Bernhardt
 function! RenameFile()
@@ -205,4 +212,7 @@ runtime macros/matchit.vim
 " ---------- COLORS ------------
 set t_Co=256
 set background=dark
-colorscheme vividchalk
+"colorscheme vividchalk
+
+autocmd BufEnter * colorscheme vividchalk
+autocmd BufEnter *.md colorscheme pencil
