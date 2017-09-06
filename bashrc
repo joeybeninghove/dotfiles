@@ -25,6 +25,9 @@ bind "set show-all-if-ambiguous On"
 # load aliases
 source ~/.aliases
 
+# load private exports
+source ~/Documents/Security/bash_exports
+
 # load git completion
 source ~/.git-completion
 
