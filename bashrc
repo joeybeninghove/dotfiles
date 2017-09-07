@@ -41,5 +41,8 @@ eval "$(rbenv init -)"
 # add bin dirs to path
 export PATH=$HOME/-/bin:./bin:$PATH
 
+export RACK_ENV=development
+export RAILS_ENV=development
+
 # load z
 source /usr/local/etc/profile.d/z.sh
