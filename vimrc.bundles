@@ -31,6 +31,8 @@ Plugin 'tpope/vim-endwise'
 Plugin 'pangloss/vim-javascript'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-colors-pencil'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 
