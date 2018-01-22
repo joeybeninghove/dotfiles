@@ -85,6 +85,9 @@ set path=.
 " syntax coloring lines that are too long just slows down the world
 set synmaxcol=500
 
+" use old regex engine for faster syntax highlighting (in Ruby)
+set re=1
+
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " ruby syntax highlighting for watchr scripts
