@@ -39,7 +39,7 @@ source ~/.prompt
 eval "$(rbenv init -)"
 
 # add bin dirs to path
-export PATH=$HOME/-/bin:./bin:$PATH
+export PATH=$HOME/-/bin:./node_modules/.bin:./bin:$PATH
 
 export RACK_ENV=development
 export RAILS_ENV=development
