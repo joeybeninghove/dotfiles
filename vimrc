@@ -182,7 +182,7 @@ let g:user_emmet_leader_key='<C-y>'
 
 " toggle nerdtree
 map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-let NERDTreeIgnore=['\node_modules$']
+let NERDTreeIgnore=['node_modules']
 
 " suspend
 map <silent> <leader>z :suspend<cr>
@@ -215,7 +215,5 @@ runtime macros/matchit.vim
 " ---------- COLORS ------------
 set t_Co=256
 set background=dark
-"colorscheme vividchalk
-
-autocmd BufEnter * colorscheme vividchalk
-autocmd BufEnter *.md colorscheme pencil
+colorscheme vividchalk
+hi Search ctermbg=DarkGray
