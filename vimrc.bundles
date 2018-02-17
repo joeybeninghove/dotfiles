@@ -7,34 +7,34 @@ call vundle#begin()
 " let vundle manage vundle
 Plugin 'gmarik/Vundle.vim'
 
-" github bundles
+" languages
+Plugin 'tpope/vim-haml'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'groenewege/vim-less'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-liquid'
+
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'janko-m/vim-test'
-Plugin 'tpope/vim-bundler'
-Plugin 'groenewege/vim-less'
 Plugin 'SirVer/ultisnips'
-Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'tyru/current-func-info.vim'
-Plugin 'joeybeninghove/vim-hybrid'
-Plugin 'tpope/vim-vividchalk'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-endwise'
-Plugin 'pangloss/vim-javascript'
-Plugin 'reedes/vim-pencil'
-Plugin 'reedes/vim-colors-pencil'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+
+" theme
+Plugin 'tpope/vim-vividchalk'
 
 call vundle#end()
 
 filetype plugin indent on
-
