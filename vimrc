@@ -169,13 +169,16 @@ let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+" markdown
+let g:vim_markdown_folding_disabled = 1
 
 " emmet
 let g:user_emmet_leader_key='<C-y>'
@@ -189,14 +192,6 @@ map <silent> <leader>z :suspend<cr>
 
 " open in marked
 nnoremap <leader>m :silent !open -a Markoff.app '%:p'<cr>
-
-let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
-
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
-augroup END
 
 " thanks to Gary Bernhardt
 function! RenameFile()
