@@ -15,6 +15,7 @@ alias bu="bundle update"
 alias cob="git checkout -b"
 alias bd="git branch -d"
 alias git="hub"
+alias mux="tmuxinator"
 
 alias nginx.start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx-full.plist"
 alias nginx.stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.nginx-full.plist"
