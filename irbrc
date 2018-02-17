@@ -1,4 +1,4 @@
-require "rubygems"
+require 'rubygems'
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
@@ -14,3 +14,7 @@ class Object
     end
   end
 end
+
+require 'irb/ext/save-history'
+IRB.conf[:SAVE_HISTORY] = 100
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
