@@ -38,11 +38,18 @@ source ~/.prompt
 # init rbenv
 eval "$(rbenv init -)"
 
+# add composer bins to path
+export PATH=$HOME/.composer/vendor/bin:$PATH
+
 # add bin dirs to path
 export PATH=$HOME/-/bin:./node_modules/.bin:./bin:$PATH
 
 export RACK_ENV=development
 export RAILS_ENV=development
+
+# needed to get gpg working with stdin
+GPG_TTY=$(tty)
+export GPG_TTY
 
 # load z
 source /usr/local/etc/profile.d/z.sh
