@@ -94,6 +94,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 autocmd BufRead,BufNewFile *.watchr set filetype=ruby
 autocmd BufRead,BufNewFile *.god set filetype=ruby
 autocmd BufRead,BufNewFile Phakefile set filetype=php
+autocmd BufRead,BufNewFile *.req set filetype=php
 
 autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
