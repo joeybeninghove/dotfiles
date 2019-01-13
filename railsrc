@@ -1,0 +1,3 @@
+--webpack
+--database=postgresql
+--skip-sprockets
