@@ -3,7 +3,6 @@ export CLICOLOR=1
 
 # paths
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:vendor/bin
-export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 
 # vim for life
 export EDITOR="vim"
