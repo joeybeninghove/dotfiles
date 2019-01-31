@@ -1,3 +1,5 @@
---webpack
+--webpack=stimulus
 --database=postgresql
 --skip-sprockets
+--skip-coffee
+--skip-test
