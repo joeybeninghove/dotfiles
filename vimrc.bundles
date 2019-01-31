@@ -16,6 +16,8 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-liquid'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'rhysd/vim-gfm-syntax'
+Plugin 'JulesWang/css.vim'
 
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'rking/ag.vim'

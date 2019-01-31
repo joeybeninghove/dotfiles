@@ -99,6 +99,10 @@ autocmd BufRead,BufNewFile *.req set filetype=php
 autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
+let g:gfm_syntax_enable_always = 0
+let g:gfm_syntax_enable_filetypes = ['markdown.gfm']
+autocmd BufRead,BufNew,BufNewFile README.md setlocal ft=markdown.gfm
+
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
@@ -187,6 +191,7 @@ let g:user_emmet_leader_key='<C-y>'
 " toggle nerdtree
 map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 let NERDTreeIgnore=['node_modules']
+let NERDTreeWinSize=50
 
 " suspend
 map <silent> <leader>z :suspend<cr>
