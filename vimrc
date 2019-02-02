@@ -88,7 +88,9 @@ set synmaxcol=500
 " use old regex engine for faster syntax highlighting (in Ruby)
 set re=1
 
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 " ruby syntax highlighting for watchr scripts
 autocmd BufRead,BufNewFile *.watchr set filetype=ruby

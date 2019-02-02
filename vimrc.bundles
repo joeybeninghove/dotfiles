@@ -35,6 +35,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/goyo.vim'
+Plugin 'itchyny/lightline.vim'
 
 " theme
 Plugin 'tpope/vim-vividchalk'
