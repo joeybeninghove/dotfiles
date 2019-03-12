@@ -2,7 +2,7 @@
 
 My current dotfiles.  Highly inspired by the [thoughbot](https://github.com/thoughtbot) crew.  Many thanks to [tpope](https://github.com/tpope) for the many awesome vim plugins.
 
-## joey-rails.rb
+## rails6.rb
 
 Heavily opininated Rails app template that I use to quickly spin up Rails apps
 using the configuration and tools I'm comfortable using.
