@@ -97,13 +97,12 @@ autocmd BufRead,BufNewFile *.watchr set filetype=ruby
 autocmd BufRead,BufNewFile *.god set filetype=ruby
 autocmd BufRead,BufNewFile Phakefile set filetype=php
 autocmd BufRead,BufNewFile *.req set filetype=php
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md.html set filetype=markdown
 
 autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
+autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
-
-let g:gfm_syntax_enable_always = 0
-let g:gfm_syntax_enable_filetypes = ['markdown.gfm']
-autocmd BufRead,BufNew,BufNewFile README.md setlocal ft=markdown.gfm
 
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
@@ -150,11 +149,6 @@ map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 map <leader>a :call RunAllSpecs()<cr>
 
-" phpspec shortcuts
-"map <Leader>s :call RunCurrentSpecFile()<CR>
-"map <Leader>f :call RunCurrentSpecFile()<CR>
-"map <Leader>a :call RunAllSpecs()<CR>
-
 " vim-test mappings
 nnoremap <silent> <Leader>f :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
@@ -175,18 +169,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
-" syntastic
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 0
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
-" markdown
-let g:vim_markdown_folding_disabled = 1
-
 " emmet
 let g:user_emmet_leader_key='<C-y>'
 
@@ -198,8 +180,8 @@ let NERDTreeWinSize=50
 " suspend
 map <silent> <leader>z :suspend<cr>
 
-" open in marked
-nnoremap <leader>m :silent !open -a Markoff.app '%:p'<cr>
+" disable markdown folding
+let g:vim_markdown_folding_disabled = 1
 
 " thanks to Gary Bernhardt
 function! RenameFile()
