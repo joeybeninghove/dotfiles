@@ -42,12 +42,21 @@ def install_tailwind
   run "./node_modules/.bin/tailwind init ./app/javascript/tailwind.js"
 
   postcss_config = %q(
-plugins:
-  postcss-import: {}
-  tailwindcss: "./app/javascript/tailwind.js"
-  postcss-cssnext: {}
+module.exports = {
+  plugins: [
+    require('postcss-import'),
+    require('tailwindcss')('./app/javascript/tailwind.js'),
+    require('postcss-flexbugs-fixes'),
+    require('postcss-preset-env')({
+      autoprefixer: {
+        flexbox: 'no-2009'
+      },
+      stage: 3
+    })
+  ]
+}
   )
-  IO.write ".postcssrc.yml", postcss_config
+  IO.write "postcss.config.js", postcss_config
 
   application_css = %q(
 @import "tailwindcss/preflight";
@@ -91,6 +100,10 @@ def create_rake_tasks
   end
 end
 
+def configure_development
+  environment "config.hosts << \"#{@app_name}.test\""
+end
+
 def db_remigrate
   rails_command "db:remigrate"
 end
@@ -100,8 +113,10 @@ def webpacker_compile
 end
 
 def configure_puma_dev
-  run "rm #{Dir.home}/.puma-dev/#{@app_path}"
-  run "ln -s #{File.dirname(__FILE__)}/#{@app_path} #{Dir.home}/.puma-dev/#{@app_path}"
+  symlink = "#{Dir.home}/.puma-dev/#{@app_name}"
+
+  run "rm #{symlink}" if File.symlink? symlink
+  run "ln -s #{Dir.pwd} #{symlink}"
 end
 
 def git_commit(message)
@@ -134,7 +149,12 @@ after_bundle do
   create_rake_tasks
   git_commit "Add db rake tasks"
 
+  configure_development
+  git_commit "Configure development environment"
+
   db_remigrate
+  git_commit "Migrate database"
+
   webpacker_compile
   configure_puma_dev
 end
