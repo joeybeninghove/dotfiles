@@ -8,15 +8,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " languages
-Plugin 'tpope/vim-haml'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'groenewege/vim-less'
-Plugin 'pangloss/vim-javascript'
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-liquid'
-Plugin 'StanAngeloff/php.vim'
 Plugin 'rhysd/vim-gfm-syntax'
 Plugin 'JulesWang/css.vim'
 
@@ -37,6 +32,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/goyo.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'w0rp/ale'
+" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 " theme
 Plugin 'tpope/vim-vividchalk'

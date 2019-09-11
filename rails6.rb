@@ -10,8 +10,8 @@ def install_rspec
 end
 
 def install_tailwind
-  run "yarn add tailwindcss"
-  run "./node_modules/.bin/tailwind init ./app/javascript/tailwind.js"
+  run "yarn add tailwindcss@next"
+  run "./node_modules/.bin/tailwind init ./app/javascript/tailwind.config.js"
 
   postcss_config = %q(
 module.exports = {
@@ -24,15 +24,15 @@ module.exports = {
       },
       stage: 3
     }),
-    require('tailwindcss')('./app/javascript/tailwind.js')
+    require('tailwindcss')('./app/javascript/tailwind.config.js')
   ]
 }
   )
   IO.write "postcss.config.js", postcss_config
 
   application_css = %q(
-@import "tailwindcss/preflight";
-@import "preflight";
+@import "tailwindcss/base";
+@import "base";
 @import "tailwindcss/components";
 @import "components";
 @import "tailwindcss/utilities";
@@ -40,7 +40,7 @@ module.exports = {
   )
 
   inside "app/javascript/stylesheets" do
-    IO.write "preflight.css", ""
+    IO.write "base.css", ""
     IO.write "components.css", ""
     IO.write "utilities.css", ""
     IO.write "application.css", application_css

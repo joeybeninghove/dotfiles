@@ -50,5 +50,10 @@ export RAILS_ENV=development
 GPG_TTY=$(tty)
 export GPG_TTY
 
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+export ANDROID_SDK=/Users/joey/Library/Android/sdk
+export PATH=/Users/joey/Library/Android/sdk/platform-tools:$PATH
+
 # load z
 source /usr/local/etc/profile.d/z.sh

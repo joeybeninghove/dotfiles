@@ -177,6 +177,11 @@ map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 let NERDTreeIgnore=['node_modules']
 let NERDTreeWinSize=50
 
+" configure ALE
+let g:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
+let g:ale_fix_on_save = 1
+let g:ale_linters_explicit = 1
+
 " suspend
 map <silent> <leader>z :suspend<cr>
 
