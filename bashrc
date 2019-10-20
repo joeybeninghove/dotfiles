@@ -37,6 +37,9 @@ source ~/.prompt
 # init rbenv
 eval "$(rbenv init -)"
 
+# init phpbrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
 # add composer bins to path
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
