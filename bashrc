@@ -13,6 +13,15 @@ export HISTCONTROL=ignoredups
 # after each command, checks the windows size and changes lines and columns
 shopt -s checkwinsize 
 
+# ignore case in bash completion
+bind "set completion-ignore-case on"
+
+# no bell
+bind "set bell-style none"
+
+# show completion without double tab-ing
+bind "set show-all-if-ambiguous On"
+
 # load aliases
 source ~/.aliases
 
@@ -32,6 +41,14 @@ eval "$(rbenv init -)"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # add bin dirs to path
-export PATH=./node_modules/.bin:./bin:$PATH
+export PATH=$HOME/-/bin:./node_modules/.bin:./bin:$PATH
+
 export RACK_ENV=development
 export RAILS_ENV=development
+
+# load z
+source /usr/local/etc/profile.d/z.sh
+
+# needed to get gpg working with stdin
+GPG_TTY=$(tty)
+export GPG_TTY
