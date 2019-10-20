@@ -1,7 +1,7 @@
 alias g="grep -i"  #case insensitive grep
 alias f="find . -iname"
 alias top="top -o cpu"
-alias ls="ls -al --color"
+alias ls="ls -al"
 alias cls="clear"
 alias gti="git"
 alias rr="rake routes"
