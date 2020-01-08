@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Convert a .cdr file to a .iso
+
+hdiutil convert $1 -format UDTO -o $2

@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:./node_modules/.bin:/Users/joey/.composer/vendor/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/joey/.oh-my-zsh"
@@ -69,7 +69,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux rbenv)
+plugins=(git tmux rbenv gitfast)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(rbenv init -)"
+
+export EDITOR="vim"
 
 ZSH_TMUX_ITERM2=true
 

@@ -1,4 +1,4 @@
-set nocompatible        " vim only please 
+set nocompatible        " vim only please
 
 let mapleader=","       " follow the leader
 
@@ -17,10 +17,10 @@ set relativenumber      " relative line numbers by default
 set clipboard=unnamed   " yank to system clipboard
 set backupdir=/tmp      " don't clutter up current dir with tmp files
 set directory=/tmp      " don't clutter up current dir with swap files
-set wildignore+=*/.git/*,*/.DS_Store,*/node_modules
+set wildignore+=*/.git/*,*/.DS_Store,*/node_modules,*/app/views/icons
 
 " load vim bundles using vundle
-source ~/.vimrc.bundles
+source ~/.vimrc.plugs
 
 " set filetype stuff to on
 syntax enable
@@ -55,7 +55,7 @@ set mousehide
 " this is the timeout used while waiting for user input on a multi-keyed macro
 " or while just sitting and waiting for another key to be pressed measured
 " in milliseconds.
-" 
+"
 " i.e. for the ",d" command, there is a "timeoutlen" wait period between the
 "      "," key and the "d" key.  If the "d" key isn't pressed before the
 "      timeout expires, one of two things happens: The "," command is
@@ -80,7 +80,7 @@ set fillchars=""
 set diffopt+=vertical
 
 " Initial path seeding
-set path=.
+set path=.,**
 
 " syntax coloring lines that are too long just slows down the world
 set synmaxcol=500
@@ -95,13 +95,6 @@ let g:lightline = {
 " ruby syntax highlighting for watchr scripts
 autocmd BufRead,BufNewFile *.watchr set filetype=ruby
 autocmd BufRead,BufNewFile *.god set filetype=ruby
-autocmd BufRead,BufNewFile Phakefile set filetype=php
-autocmd BufRead,BufNewFile *.req set filetype=php
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.md.html set filetype=markdown
-
-autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
-autocmd BufRead,BufNewFile *.md setlocal linebreak nolist
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
 " automatically rebalance windows on vim resize
@@ -171,19 +164,51 @@ let g:user_emmet_leader_key='<C-y>'
 
 " toggle nerdtree
 map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-let NERDTreeIgnore=['node_modules']
+let NERDTreeIgnore=['node_modules', 'icons']
 let NERDTreeWinSize=50
 
 " configure ALE
-let g:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
+let g:ale_linters = {
+\   'ruby': ['standardrb'],
+\   'eruby': [],
+\   'javascript': ['standard'],
+\   'css': ['stylelint'],
+\   'php': ['phpcs'],
+\}
+let g:ale_fixers = {
+\   'ruby': ['standardrb'],
+\   'javascript': ['prettier_standard'],
+\   'css': ['prettier'],
+\   'html': ['prettier'],
+\   'php': ['php_cs_fixer', 'prettier'],
+\}
+
 let g:ale_fix_on_save = 1
+let g:ale_lint_on_save = 1
 let g:ale_linters_explicit = 1
+
+" configure pencil
+augroup pencil
+  autocmd!
+  autocmd filetype markdown,mkd,liquid call pencil#init()
+augroup END
+
+" Pencil / Writing Controls {{{
+  let g:pencil#wrapModeDefault = 'soft'
+  let g:pencil#textwidth = 74
+  let g:pencil#joinspaces = 0
+  let g:pencil#cursorwrap = 1
+  let g:pencil#conceallevel = 0
+  let g:pencil#concealcursor = 'c'
+  let g:pencil#softDetectSample = 20
+  let g:pencil#softDetectThreshold = 130
+" }}}
 
 " suspend
 map <silent> <leader>z :suspend<cr>
 
-" disable markdown folding
-let g:vim_markdown_folding_disabled = 1
+" toggle distraction-free writing
+map <silent> <leader>g :Goyo<cr>
 
 " thanks to Gary Bernhardt
 function! RenameFile()
@@ -203,4 +228,4 @@ runtime macros/matchit.vim
 set t_Co=256
 set background=dark
 colorscheme vividchalk
-hi Search ctermbg=DarkGray
+hi Search ctermbg=DarkYellow

@@ -9,11 +9,11 @@ Plugin 'gmarik/Vundle.vim'
 
 " languages
 Plugin 'sheerun/vim-polyglot'
-Plugin 'maxmellon/vim-jsx-pretty'
+"Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-liquid'
-Plugin 'rhysd/vim-gfm-syntax'
-Plugin 'JulesWang/css.vim'
+"Plugin 'rhysd/vim-gfm-syntax'
+"Plugin 'JulesWang/css.vim'
 
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'rking/ag.vim'
@@ -30,9 +30,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
-Plugin 'junegunn/goyo.vim'
+"Plugin 'junegunn/goyo.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'w0rp/ale'
+Plugin 'prettier/vim-prettier'
+"Plugin 'reedes/vim-pencil'
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 " theme
