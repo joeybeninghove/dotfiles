@@ -146,6 +146,12 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <leader>gt :TestVisit<CR>
 
+let test#strategy = "vimterminal"
+
+let g:test#ruby#rspec#options = {
+      \ 'suite':   '--tag ~slow',
+      \}
+
 " tmux navigator
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
@@ -160,7 +166,7 @@ let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " emmet
-let g:user_emmet_leader_key='<C-y>'
+let g:user_emmet_leader_key=","
 
 " toggle nerdtree
 map <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
@@ -173,7 +179,7 @@ let g:ale_linters = {
 \   'eruby': [],
 \   'javascript': ['standard'],
 \   'css': ['stylelint'],
-\   'php': ['phpcs'],
+\   'php': [],
 \}
 let g:ale_fixers = {
 \   'ruby': ['standardrb'],
