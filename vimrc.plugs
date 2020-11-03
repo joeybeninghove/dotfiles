@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'leafgarland/typescript-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-liquid'
@@ -25,15 +24,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'StanAngeloff/php.vim'
-Plug 'reedes/vim-pencil' " Super-powered writing things
-Plug 'tpope/vim-abolish' " Fancy abbreviation replacements
-Plug 'junegunn/limelight.vim' " Highlights only active paragraph
-Plug 'junegunn/goyo.vim' " Full screen writing mode
-Plug 'reedes/vim-lexical' " Better spellcheck mappings
-Plug 'reedes/vim-litecorrect' " Better autocorrections
-Plug 'reedes/vim-textobj-sentence' " Treat sentences as text objects
-Plug 'reedes/vim-wordy' " Weasel words and passive voice
 
 " theme
 Plug 'tpope/vim-vividchalk'
