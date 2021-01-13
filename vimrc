@@ -175,13 +175,13 @@ let NERDTreeWinSize=50
 let g:ale_linters = {
 \   'ruby': ['standardrb'],
 \   'eruby': [],
-\   'javascript': ['standard'],
+\   'javascript': ['eslint', 'prettier-standard'],
 \   'css': ['stylelint'],
 \   'php': [],
 \}
 let g:ale_fixers = {
 \   'ruby': ['standardrb'],
-\   'javascript': ['prettier_standard'],
+\   'javascript': ['eslint', 'prettier-standard'],
 \   'css': ['prettier'],
 \   'html': ['prettier'],
 \   'php': ['php_cs_fixer', 'prettier'],
