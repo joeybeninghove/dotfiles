@@ -69,8 +69,8 @@ set scrolloff=3
 " make the command-line completion better
 set wildmenu
 
-" set the textwidth to be 80 chars
-set textwidth=80
+" set the textwidth to be 120 chars
+set textwidth=120
 set colorcolumn=+1
 
 " get rid of the silly characters in window separators
@@ -146,11 +146,9 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <leader>gt :TestVisit<CR>
 
-let test#strategy = "vimterminal"
+let test#strategy = "basic"
 
-let g:test#ruby#rspec#options = {
-      \ 'suite':   '--tag ~slow',
-      \}
+" let g:test#ruby#rspec#options = { \ 'suite':   '--tag ~slow', \}
 
 " tmux navigator
 let g:tmux_navigator_no_mappings = 1
@@ -234,4 +232,9 @@ runtime macros/matchit.vim
 set t_Co=256
 set background=dark
 colorscheme vividchalk
-hi Search ctermbg=DarkYellow
+hi Search cterm=NONE ctermfg=black ctermbg=darkyellow
+
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
