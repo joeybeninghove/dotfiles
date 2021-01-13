@@ -173,13 +173,14 @@ let NERDTreeWinSize=50
 
 " configure ALE
 let g:ale_linters = {
-\   'ruby': ['standardrb'],
+\   'ruby': ['rubocop'],
 \   'eruby': [],
 \   'javascript': ['eslint', 'prettier-standard'],
 \   'css': ['stylelint'],
 \}
+
 let g:ale_fixers = {
-\   'ruby': ['standardrb'],
+\   'ruby': ['rubocop'],
 \   'javascript': ['eslint', 'prettier-standard'],
 \   'css': ['prettier'],
 \   'html': ['prettier'],
