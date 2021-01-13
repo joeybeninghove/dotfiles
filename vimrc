@@ -177,14 +177,12 @@ let g:ale_linters = {
 \   'eruby': [],
 \   'javascript': ['eslint', 'prettier-standard'],
 \   'css': ['stylelint'],
-\   'php': [],
 \}
 let g:ale_fixers = {
 \   'ruby': ['standardrb'],
 \   'javascript': ['eslint', 'prettier-standard'],
 \   'css': ['prettier'],
 \   'html': ['prettier'],
-\   'php': ['php_cs_fixer', 'prettier'],
 \}
 
 let g:ale_fix_on_save = 1
