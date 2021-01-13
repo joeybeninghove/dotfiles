@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 Plug 'godlygeek/tabular'
-Plug 'tpope/vim-liquid'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
