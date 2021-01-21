@@ -200,23 +200,6 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
 let g:ale_linters_explicit = 1
 
-" configure pencil
-augroup pencil
-  autocmd!
-  autocmd filetype markdown,mkd,liquid call pencil#init()
-augroup END
-
-" Pencil / Writing Controls {{{
-  let g:pencil#wrapModeDefault = 'soft'
-  let g:pencil#textwidth = 74
-  let g:pencil#joinspaces = 0
-  let g:pencil#cursorwrap = 1
-  let g:pencil#conceallevel = 0
-  let g:pencil#concealcursor = 'c'
-  let g:pencil#softDetectSample = 20
-  let g:pencil#softDetectThreshold = 130
-" }}}
-
 " suspend
 map <silent> <leader>z :suspend<cr>
 
