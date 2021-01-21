@@ -109,12 +109,22 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
-nmap <leader>t :CtrlP<cr>
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|public$|log\|tmp|vendor|node_modules$',
-  \ 'file': '\.dat$|\.DS_Store$'
-  \ }
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:fzf_files_options =
+  \ '--reverse ' .
+  \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
+let g:fzf_layout = { 'down': '~60%' }
+nnoremap <leader>t :Files<cr>
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+
+nnoremap <leader>ga :Files app/<cr>
+nnoremap <leader>gm :Files app/models/<cr>
+nnoremap <leader>gv :Files app/views/<cr>
+nnoremap <leader>gc :Files app/controllers/<cr>
+nnoremap <leader>gy :Files app/assets/stylesheets/<cr>
+nnoremap <leader>gj :Files app/assets/javascripts/<cr>
+nnoremap <leader>gs :Files spec/<cr>
+
+" vim:ft=vim
 
 " turn off that stupid highlight search
 nmap <silent> <leader>h :nohlsearch<cr>
