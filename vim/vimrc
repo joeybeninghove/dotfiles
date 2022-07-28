@@ -1,0 +1,16 @@
+" Vimrc
+"
+" This file contains the minimal settings to set the foundation, with the
+" majority of the configuration and settings living in files spread between
+" vim/rcfiles and vim/rcplugins
+
+set nocompatible
+
+" follow the leader
+let mapleader=","
+
+call plug#begin('~/.vim/plugged')
+call s:SourceConfigFilesIn('rcplugins')
+call plug#end()
+
+call s:SourceConfigFilesIn('rcfiles')
