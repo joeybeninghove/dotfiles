@@ -100,7 +100,11 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias rr="rails restart"
+alias b="bundle"
 alias bo="bundle open"
+alias ss="spring stop"
+alias prune="git remote update origin --prune"
+alias setup="rails restart db:drop && ./bin/setup"
 
 bindkey '^ ' autosuggest-accept
 
