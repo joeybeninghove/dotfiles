@@ -201,6 +201,9 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_save = 1
 let g:ale_linters_explicit = 1
 
+" vim-gist
+let g:gist_post_private = 1
+
 " suspend
 map <silent> <leader>z :suspend<cr>
 
